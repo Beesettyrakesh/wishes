@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>wishes</title>
+        <script>
+            function showImage()
+            {
+                document.getElementById('hiddenImage').style.visibility='visible';
+            }
+            setTimeout('showImage()',10000);
+        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900&display=swap');
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+        }
+        .fade-in{
+            animation: fadeIn 30s;
+        }
+        @keyframes fadeIn {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        .fade-out{
+            animation: fadeOut 10s;
+        }
+        @keyframes fadeOut {
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+        .fade-out{
+            color: rgb(255, 217, 217);
+            animation: type 7s steps(32);
+            overflow:hidden;
+            white-space:nowrap;
+            font-family:consolas;
+            border-right:4px solid white;
+            width:32ch
+        }
+        @keyframes type{
+            0%{
+                width:0ch;  
+            }
+            100%{
+                width:32ch;
+            }
+        }
+        img{
+            height: 560px;
+            width: 600px;
+        }
+        @media only screen and (max-width: 600px){
+            .fade-in{
+                position: relative;
+                top: 22rem;
+                left: 7rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 200%;
+                height: 100%;
+            }
+            h2{
+                margin-left: 2rem;
+                position: relative;
+                top: 22rem;
+                left: 6.5rem;
+                justify-content: center;
+                align-items: center;
+                font-size: 14em;
+            }
+        }
+    </style>
+    <body>
+        <div style="width: 680px;height:50px;position:absolute;display: flex;justify-content: center;align-items: center;">
+            <h2 class="fade-out" style="font-family: 'Dancing Script', cursive;font-size: 30px;">Wish you many more happy returns of the day murali.</h2>
+        </div>
+        <div id="hiddenImage" style="visibility: hidden;display: flex;justify-content: center;align-items: center;">
+            <img class="fade-in" src="murali.jpg"/>
+        </div>
+    </body>
+</html>
